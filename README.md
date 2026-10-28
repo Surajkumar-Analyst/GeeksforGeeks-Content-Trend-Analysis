@@ -5,7 +5,7 @@
 An end-to-end Python data analytics project exploring **170,000+ GeeksforGeeks articles** to understand content distribution, programming language popularity, publishing trends, and the evolution of technical education from 2014 to 2025.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Surajkumar-Analyst/GeeksforGeeks-Content-Trend-Analysis/GFG-Trend-Analysis/Assets/project_banner.png" alt="GeeksforGeeks Content Trend Analysis Banner" width="100%">
+  <img src="https://raw.githubusercontent.com/Surajkumar-Analyst/GeeksforGeeks-Content-Trend-Analysis/main/Assets/project_banner.png" alt="GeeksforGeeks Content Trend Analysis Banner" width="100%">
 </p>
 
 <p align="center">
