@@ -4,7 +4,7 @@
 
 An end-to-end Python data analytics project exploring **170,000+ GeeksforGeeks articles** to understand content distribution, programming language popularity, publishing trends, and the evolution of technical education from 2014 to 2025.
 
-![Project Banner](Assets/project_banner.png)
+![GeeksforGeeks Content Trend Analysis](Assets/project_banner.png)
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-Data%20Analysis-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
