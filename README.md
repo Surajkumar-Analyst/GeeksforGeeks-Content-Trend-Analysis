@@ -1,334 +1,291 @@
-# 📊 GeeksforGeeks Content Trend Analysis
 
-### Uncovering 12 Years of Content Evolution, Technology Trends & Publishing Insights
+<div align="center">
 
-An end-to-end Python data analytics project exploring **170,000+ GeeksforGeeks articles** to understand content distribution, programming language popularity, publishing trends, and the evolution of technical education from 2014 to 2025.
+# GeeksforGeeks Article Content Intelligence
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Surajkumar-Analyst/GeeksforGeeks-Content-Trend-Analysis/main/GFG-Trend-Analysis/Assets/project_banner.png" alt="GeeksforGeeks Content Trend Analysis Banner" width="100%">
-</p>
+**A Python data analytics project exploring content distribution, publishing trends, topic diversity, and editorial opportunities.**
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-Data%20Analysis-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python Data Analysis">
-  <img src="https://img.shields.io/badge/Pandas-Data%20Cleaning-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas Data Cleaning">
-  <img src="https://img.shields.io/badge/Plotly-Visualizations-3F4F75?style=for-the-badge&logo=plotly&logoColor=white" alt="Plotly Visualizations">
-  <img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter Notebook">
-</p>
----
+<img src="https://raw.githubusercontent.com/Surajkumar-Analyst/GeeksforGeeks-Content-Trend-Analysis/main/GFG-Trend-Analysis/Assets/project_banner.png" alt="Project Banner" width="100%">
 
-## 📌 About the Project
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 
-Every day, educational platforms publish technical content on programming, web development, interview preparation, artificial intelligence, and emerging technologies.
-
-But publishing more articles doesn't automatically mean understanding what learners need.
-
-**The real questions are:**
-
-- 📚 Which technical topics receive the most content?
-- 🐍 Which programming languages dominate educational resources?
-- 📈 How has publishing activity changed over the years?
-- 🌱 How quickly are new technical categories emerging?
-- 🎯 Which areas could benefit from more learning resources?
-- 🖼️ How does image usage differ between technical topics?
-
-This project explores these questions by analyzing article metadata from GeeksforGeeks using Python, data cleaning, exploratory data analysis (EDA), and visualization.
-
-The objective is to turn a large collection of article records into understandable findings that can help explain content evolution and support better editorial planning.
-
-## 📊 Project at a Glance
-
-| Project metric | Overview |
-|---|---|
-| Dataset size | 170,000+ articles |
-| Time period | 2014–2025 |
-| Content diversity | 440+ unique categories reported in 2025 |
-| Largest knowledge domain | Programming Languages |
-| Primary tools | Python, Pandas, NumPy |
-| Visualization tools | Plotly, Matplotlib |
-| Analysis environment | Jupyter Notebook |
-
-*These figures summarize the findings recorded in this project; the category count represents reported content diversity, not the number of articles.*
+</div>
 
 ---
 
-## 🔄 How the Project Works
+## 📌 Project Overview
 
-The project follows a straightforward analytics workflow: start with article data, prepare it for analysis, investigate patterns, and turn those patterns into insights.
+GeeksforGeeks publishes technical learning resources across programming, data structures and algorithms, web development, databases, AI, interview preparation, and other computing topics.
+
+This project analyzes article-level metadata to understand how the content catalogue is organized and how its observed patterns change over time.
+
+The goal is to turn raw article metadata into useful insights that can support content planning, taxonomy management, and editorial decision-making.
+
+**Project objectives:**
+- Identify the largest content categories.
+- Measure category contribution and catalogue concentration.
+- Analyze annual publishing patterns.
+- Track category consistency and topic diversity.
+- Compare image usage across technical subjects.
+- Identify recent category-level changes.
+- Translate analytical findings into actionable recommendations.
+
+## 🎯 Business Questions
+
+- Which categories contain the most article records?
+- How concentrated is the catalogue among the leading categories?
+- How has recorded content volume changed over time?
+- Which categories appear consistently across multiple years?
+- How has the diversity of observed categories evolved?
+- How does image usage vary across technical subjects?
+- Which categories show the largest changes between the latest observed years?
+- What editorial opportunities should be investigated next?
+
+## 🔄 Analytical Workflow
 
 ```mermaid
 flowchart TD
-    A["📂 GeeksforGeeks Article Dataset"] --> B["🧹 Data Cleaning"]
-    B --> C["⚙️ Feature Engineering"]
-    C --> D["🔍 Exploratory Data Analysis"]
-    D --> E["📊 Trend & Category Analysis"]
-    E --> F["💡 Business Insights"]
-    F --> G["🎯 Content Strategy Recommendations"]
-
-    style A fill:#E8F2FF,stroke:#3974C6,color:#17365D
-    style B fill:#E9F8F0,stroke:#269568,color:#145A3A
-    style C fill:#F3EAFE,stroke:#8B5CC7,color:#482477
-    style D fill:#FFF3DD,stroke:#D99B32,color:#754B08
-    style E fill:#E0F7FA,stroke:#1596A3,color:#07545B
-    style F fill:#E8F2FF,stroke:#3974C6,color:#17365D
-    style G fill:#E9F8F0,stroke:#269568,color:#145A3A
+    A["Article Dataset"] --> B["Data Loading"]
+    B --> C["Data Cleaning and Quality Checks"]
+    C --> D["Feature Engineering"]
+    D --> E["Exploratory Data Analysis"]
+    E --> F["Category and Trend Analysis"]
+    F --> G["Topic Diversity and Image Analysis"]
+    G --> H["Business Insights"]
+    H --> I["Recommendations and CSV Exports"]
 ```
 
-### What happens at each stage?
+## 📊 Analysis Modules
 
-| Stage | What it does | Why it matters |
+| Module | Analysis | Business Value |
 |---|---|---|
-| Data Cleaning | Prepares article metadata for analysis | Improves consistency |
-| Feature Engineering | Derives useful date and content attributes | Makes comparisons possible |
-| EDA | Examines distributions, dates, and measures | Helps understand the dataset |
-| Trend Analysis | Compares categories and publishing patterns | Reveals long-term changes |
-| Business Insights | Interprets analytical findings | Connects data to decisions |
-| Recommendations | Identifies potential content opportunities | Supports future planning |
+| Data Quality | Missing values, duplicate records, field availability | Establishes data reliability |
+| Executive Snapshot | Dataset size, category coverage, and date coverage | Provides a quick overview |
+| Category Portfolio | Category rankings and article shares | Identifies major content areas |
+| Concentration Analysis | Category contribution and cumulative share | Measures dependence on leading categories |
+| Annual Trends | Article volume by year and year-over-year change | Highlights historical patterns |
+| Topic Mix | Leading category volume across years | Shows changes in subject distribution |
+| Category Consistency | Active years and category-level volume | Identifies recurring content areas |
+| Image Usage | Image counts and image presence by category | Compares visual content patterns |
+| Topic Diversity | Unique categories observed each year | Tracks catalogue breadth |
+| Recent Category Movement | Changes between the latest two available years | Identifies areas for further investigation |
+| Broader Themes | Rule-based grouping of technical categories | Provides a higher-level content overview |
+| Recommendations | Evidence-linked actions and validation metrics | Supports editorial planning |
 
----
+## 📈 Key Results and Findings
 
-## 🗂️ Repository Structure
+The notebook calculates the actual metrics from the dataset when executed. The following are the main findings it is designed to produce.
 
-```text
-GFG-Trend-Analysis/
-│
-├── Assets/
-│   └── project_banner.png
-│
-├── data/
-│   └── gfg_articles_clean_data.csv
-│
-├── notebook/
-│   └── GFG_Articles_Analysis.ipynb
-│
-└── README.md
-```
+### 1. Content Distribution
+Identifies the categories with the highest article counts, their contribution to the catalogue, and the cumulative share represented by leading categories.
 
-- **Assets/** — project banner and visual resources.
-- **data/** — cleaned article dataset used for analysis.
-- **notebook/** — complete analysis, code, and visualizations.
-- **README.md** — project documentation and key findings.
+### 2. Catalogue Concentration
+Measures whether article records are concentrated in a small number of categories or distributed across a broader range of topics.
 
-## 📚 Understanding the Dataset
+### 3. Publishing Trends
+Examines annual article volume and changes across the years represented in the dataset.
 
-The dataset contains article-level metadata, allowing us to study how technical content is organized and how publishing patterns have changed over time.
+### 4. Category Consistency
+Identifies categories that appear across multiple observed years and compares their overall article volume.
 
-| Column | What it tells us |
+### 5. Topic Diversity
+Tracks the number of unique categories recorded each year to understand how the breadth of the catalogue changes.
+
+### 6. Recent Category Movement
+Highlights categories with the largest absolute changes between the latest two available years.
+
+### 7. Image Usage
+Compares image counts and the share of articles containing images across categories.
+
+### 8. Broader Technical Themes
+Groups categories into wider subject areas using explicit classification rules, while retaining an unmapped group for categories that do not match the rules.
+
+> Run the notebook to view the actual values, rankings, tables, and visualizations generated from the dataset.
+
+## 💡 Business Insights and Recommendations
+
+The following recommendations are hypotheses based on catalogue patterns. They should be validated with audience and performance data before making major content decisions.
+
+| Observed Pattern | Recommended Action | Validation Metric |
+|---|---|---|
+| A few categories contribute a large share of article records | Review coverage, freshness, duplication, and missing subtopics in leading categories | Search impressions, clicks, content freshness |
+| The catalogue contains many specialized categories | Review taxonomy consistency and improve navigation between related topics | Internal click-through rate, tag consistency |
+| Category volume changes across years | Investigate major increases or decreases before changing publishing priorities | Comparable yearly data, search demand |
+| Category diversity expands | Introduce a controlled taxonomy and review new category names | Unmapped-tag rate, duplicate tags |
+| Image usage varies by subject | Assess whether diagrams and screenshots improve technical explanations | Usability testing, reader feedback |
+| Some categories may have limited coverage | Compare catalogue coverage with actual learner needs before commissioning content | Search demand, traffic, content gaps |
+
+### Recommended Business Next Step
+
+Combine article metadata with performance metrics such as:
+
+- Search impressions and clicks
+- Click-through rate
+- Page views and engagement
+- Article freshness
+- Search landing-page performance
+- Reader feedback
+
+This would help distinguish topics with high content volume from topics that actually attract readers or provide strong learning outcomes.
+
+## 📊 Visualizations
+
+The notebook generates analytical tables and charts covering:
+
+- Category rankings
+- Category contribution and cumulative share
+- Annual publishing trends
+- Category mix by year
+- Category consistency
+- Image usage by category
+- Annual topic diversity
+- Recent category movement
+- Broader theme distribution
+
+All chart outputs should be generated from the notebook's actual dataset rather than manually recreated from unverified figures.
+
+## 🗂️ Dataset Overview
+
+The project uses article-level metadata. Depending on the source file, relevant fields may include:
+
+| Field | Purpose |
 |---|---|
-| `Title` | The article's title |
-| `Last Updated` | The recorded update timestamp |
-| `Last Updated Date` | The date field used for analysis |
-| `Year` | The publishing year attribute |
-| `Month` | The month attribute |
-| `Category` | The article's technical category |
-| `Day of Week` | The weekday attribute |
-| `Number of Images` | The number of images in the article |
+| Article title | Article-level reference |
+| Category or tags | Category distribution and topic analysis |
+| Last-updated date | Date-based analysis where usable |
+| Year | Annual comparisons |
+| Number of images | Visual-format analysis |
 
-These fields help investigate publishing activity, category popularity, content diversity, and differences in visual presentation.
-
----
-
-## 🔍 Three Major Areas of Analysis
-
-### 1. 📚 Understanding What Gets Published
-
-<details>
-<summary><b>Explore category distribution and programming language popularity</b></summary>
-
-This analysis examines how article content is distributed across technical topics.
-
-Questions explored:
-
-- Which categories contain the most articles?
-- How do Programming Languages and Web Technologies compare with other topics?
-- Which programming languages receive the most coverage?
-- How much content is concentrated in a small number of categories?
-- Which specialized topics make up the long tail?
-
-**Why it matters:** Understanding content distribution helps identify the platform's major educational focus areas and the breadth of its technical coverage.
-
-</details>
-
-### 2. 📅 Tracking Content Evolution Over Time
-
-<details>
-<summary><b>Explore yearly growth, monthly activity, and category evolution</b></summary>
-
-The time-based analysis investigates changes in publishing activity across the 2014–2025 study period.
-
-It examines:
-
-- Yearly publishing trends.
-- Monthly publishing patterns.
-- Category growth across years.
-- The emergence of new technical topics.
-- Long-term consistency in major categories.
-
-**Why it matters:** Historical trends provide context for understanding how educational priorities and technical subject coverage evolve.
-
-</details>
-
-### 3. 🖼️ Exploring Content Diversity and Visual Style
-
-<details>
-<summary><b>Explore new categories, broader themes, and image usage</b></summary>
-
-The project also examines how the platform's subject coverage has diversified and how visual content differs between categories.
-
-The analysis includes:
-
-- Unique category counts.
-- Category diversity over time.
-- Grouping individual tags into broader themes.
-- Image density across different technical topics.
-- Comparisons between visual-heavy and code-focused content.
-
-Broader themes include Programming Languages, Web Development, AI / ML / Data Science, Interview Preparation, Backend & Frameworks, and Miscellaneous Topics.
-
-**Why it matters:** These comparisons help explain the breadth of the content library and differences in how technical subjects are presented.
-
-</details>
-
----
-
-## 📈 Key Findings
-
-The following findings come from the existing project analysis.
-
-### 🐍 Programming Languages are a major content pillar
-
-Programming Languages account for more than **44,000 articles**, making them the largest knowledge domain identified in the analysis.
-
-### 🌐 Web Technologies remain important
-
-Web Technologies rank among the largest content categories, showing sustained emphasis on web development education.
-
-### 💼 Interview preparation has a lasting presence
-
-Interview Experiences remain a consistently represented category, reflecting the platform's focus on career preparation.
-
-### 🏆 Python leads programming language coverage
-
-Python is the most frequently covered programming language in the analyzed dataset, ahead of JavaScript and Java in overall article volume.
-
-### 📚 Content follows a long-tail distribution
-
-The analysis reports that a small group of leading categories accounts for nearly **45% of published content**, while hundreds of specialized topics make up the remainder.
-
-### 🚀 Content diversity expanded rapidly
-
-Between 2022 and 2025, the reported number of unique categories increased from approximately **167 to more than 440**.
-
-### 🖼️ Image usage differs by subject
-
-Installation guides and Web Technologies show higher image density, while programming-focused tutorials rely more heavily on code examples.
-
----
-
-## 📊 Visualizations & Charts
-
-The Jupyter Notebook contains the project's analytical visualizations. The following gallery describes the main charts and what readers can learn from them.
-
-| Visualization | What it explains |
-|---|---|
-| Category Distribution | Which technical topics contain the most articles |
-| Yearly Publishing Trends | How publishing activity changes over time |
-| Monthly Activity | Differences in publishing patterns by month |
-| Programming Language Comparison | Relative coverage of programming languages |
-| Category Contribution | How much major categories contribute to total content |
-| Category Diversity Growth | How the variety of topics changes over time |
-| Image Density Analysis | How image usage differs across technical subjects |
-| Ranking Analysis | The highest-volume categories and topics |
-
-**View the complete analysis:** [Open the Jupyter Notebook](notebook/GFG_Articles_Analysis.ipynb)
-
-> **Chart images:** The repository currently lists the project banner but not separate exported chart images. To make the README more visual, export selected charts from the notebook as PNG files into `Assets/` and embed them here. Use the notebook's actual output rather than recreating charts from summary statistics.
-
-For example, after exporting a real chart, embed it with:
-
-```markdown
-![Category Distribution](Assets/category_distribution.png)
-```
-
-Recommended first exports are the category distribution, yearly publishing trend, programming language comparison, and category diversity growth charts.
-
----
-
-## 💡 Business Insights & Recommendations
-
-Analysis becomes more useful when it helps people decide what to do next.
-
-| Finding | Potential action |
-|---|---|
-| Programming Languages have extensive coverage | Maintain and improve core programming resources |
-| Web Technologies remain a major category | Continue monitoring web development topics |
-| Interview preparation is consistently represented | Keep interview learning materials relevant |
-| Many niche categories exist | Evaluate emerging topics for further coverage |
-| Category diversity has increased | Monitor new subject areas and changing learner needs |
-| Image density differs by topic | Match visual presentation to the type of technical content |
-
-These are potential recommendations based on observed content patterns; the metadata alone does not establish actual reader demand, engagement, or content quality.
-
----
+The notebook checks field availability and standardizes relevant fields before performing the analysis.
 
 ## 🛠️ Technology Stack
 
-| Technology | Role in the project |
+| Technology | Usage |
 |---|---|
-| Python | Analysis and processing |
-| Pandas | Data cleaning and transformation |
+| Python | Data analysis and processing |
+| Pandas | Data cleaning, grouping, and aggregation |
 | NumPy | Numerical operations |
 | Plotly | Interactive visualizations |
 | Matplotlib | Statistical charts |
-| Jupyter Notebook | Analysis environment |
+| Jupyter Notebook | Reproducible analysis environment |
 
-## 🎯 Skills Demonstrated
+## 🚀 How to Run the Project
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Surajkumar-Analyst/GeeksforGeeks-Content-Trend-Analysis.git
+cd GeeksforGeeks-Content-Trend-Analysis
+```
+
+### 2. Install dependencies
+
+```bash
+python -m pip install pandas numpy plotly matplotlib jupyter
+```
+
+### 3. Start Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+### 4. Open the analysis notebook
+
+Navigate to the `GFG-Trend-Analysis/notebook/` directory and open the notebook you want to run.
+
+### 5. Configure the dataset
+
+Ensure the CSV dataset is available at one of the paths configured in the notebook. If your file is stored elsewhere, update the dataset path near the beginning of the notebook.
+
+### 6. Run all cells
+
+Execute the notebook from top to bottom to generate the analysis, visualizations, recommendations, and output tables.
+
+## 📁 Project Structure
+
+```text
+GeeksforGeeks-Content-Trend-Analysis/
+└── GFG-Trend-Analysis/
+    ├── Assets/
+    │   └── project_banner.png
+    ├── data/
+    │   └── gfg_articles_clean_data.csv
+    ├── notebook/
+    │   ├── GFG_Articles_Analysis.ipynb
+    │   └── GFG_Content_Intelligence_Professional.ipynb
+    └── README.md
+```
+
+Update this structure if your committed filenames or folders differ.
+
+## 📤 Generated Outputs
+
+After running the redesigned notebook, the analysis is configured to export these CSV summaries into an `outputs/` directory:
+
+| Output File | Contents |
+|---|---|
+| `data_quality_summary.csv` | Data quality summary |
+| `category_performance.csv` | Category rankings and performance |
+| `annual_content_volume.csv` | Annual article volume |
+| `category_consistency.csv` | Category activity across years |
+| `category_image_usage.csv` | Image usage by category |
+| `annual_topic_diversity.csv` | Annual category diversity |
+| `broader_theme_summary.csv` | Summary by broader theme |
+| `content_strategy_recommendations.csv` | Recommendations and supporting evidence |
+
+These are derived analytical outputs; the source dataset is not modified.
+
+## ⚠️ Limitations
+
+- Article counts measure catalogue volume, not readership or content quality.
+- A last-updated date may not represent the original publication date.
+- The latest year may be incomplete, making direct comparisons with full years misleading.
+- Changes in tags and classification practices can affect measured category diversity.
+- Broader theme groups use rule-based classification and may require editorial review.
+- Image presence alone cannot establish whether images improve engagement or learning outcomes.
+- Percentage changes can be unstable when the previous period has a small or zero count.
+
+## 🔮 Future Enhancements
+
+- Build an interactive dashboard for content monitoring.
+- Integrate search and engagement data.
+- Apply NLP-assisted topic classification.
+- Improve taxonomy governance and category mapping.
+- Automate recurring analysis and report generation.
+- Evaluate content opportunities using demand, performance, and production effort.
+- Add forecasting after validating the quality and coverage of historical data.
+
+These are potential extensions, not claims about features already implemented.
+
+## 🧠 Skills Demonstrated
 
 **Data Analytics**
 - Exploratory Data Analysis (EDA)
 - Data cleaning and feature engineering
-- Time-series and trend analysis
-- Category and ranking analysis
+- Category ranking and concentration analysis
+- Year-based trend analysis
 - Data visualization and interpretation
 
-**Business Thinking**
-- Translating questions into analytical tasks
-- Identifying content distribution patterns
+**Business Analysis**
+- Translating business questions into analytical tasks
+- Identifying content portfolio patterns
 - Developing evidence-based recommendations
+- Defining validation metrics
 - Communicating findings through data storytelling
 
-**Python & Data Tools**
-- Working with structured datasets
-- Manipulating data with Pandas and NumPy
-- Creating visualizations with Plotly and Matplotlib
-- Documenting analysis in Jupyter Notebook
+**Python and Tools**
+- Pandas and NumPy
+- Plotly and Matplotlib
+- Jupyter Notebook
+- Reproducible analytical workflows
+- CSV reporting and export
 
----
+## 🤝 Feedback and Contributions
 
-## 🚀 Future Enhancements
+If you find this project useful, consider starring the repository or opening an issue with suggestions for improvement.
 
-Potential next steps for the project include:
-
-- 📊 Building an interactive Streamlit dashboard.
-- 🔮 Forecasting publishing trends using historical data.
-- 🧠 Applying NLP to group similar article topics.
-- 🔄 Automating the reporting workflow.
-- 📡 Monitoring new article metadata over time.
-- 🎯 Developing a topic recommendation system.
-
-These are planned extensions, not features claimed to be implemented in the current version.
-
-## 📂 Explore the Project
-
-| Resource | Link |
-|---|---|
-| Complete Analysis | [GFG Articles Analysis Notebook](notebook/GFG_Articles_Analysis.ipynb) |
-| Cleaned Dataset | [Article Dataset](data/gfg_articles_clean_data.csv) |
-| Project Banner | [View Banner](Assets/project_banner.png) |
-
-## 👋 Connect & Support
-
-If you find this project useful, consider giving the repository a ⭐, opening an issue, or sharing suggestions for improvement.
-
-Your feedback helps improve the project and encourages further work in data analytics.
-
-**Made with ❤️ using Python, Data Analytics, and curiosity about how technical content evolves.**
+**Built with Python, data analytics, and curiosity about how technical learning content evolves.**
