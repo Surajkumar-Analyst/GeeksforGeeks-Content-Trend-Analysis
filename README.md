@@ -4,15 +4,16 @@
 
 An end-to-end Python data analytics project exploring **170,000+ GeeksforGeeks articles** to understand content distribution, programming language popularity, publishing trends, and the evolution of technical education from 2014 to 2025.
 
-![GeeksforGeeks Content Trend Analysis](Assets/project_banner.png)
-
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-Data%20Analysis-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/Pandas-Data%20Cleaning-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
-  <img src="https://img.shields.io/badge/Plotly-Interactive%20Charts-3F4F75?style=for-the-badge&logo=plotly&logoColor=white" alt="Plotly"/>
-  <img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter"/>
+  <img src="https://raw.githubusercontent.com/Surajkumar-Analyst/GeeksforGeeks-Content-Trend-Analysis/main/Assets/project_banner.png" alt="GeeksforGeeks Content Trend Analysis Banner" width="100%">
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-Data%20Analysis-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python Data Analysis">
+  <img src="https://img.shields.io/badge/Pandas-Data%20Cleaning-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas Data Cleaning">
+  <img src="https://img.shields.io/badge/Plotly-Visualizations-3F4F75?style=for-the-badge&logo=plotly&logoColor=white" alt="Plotly Visualizations">
+  <img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter Notebook">
+</p>
 ---
 
 ## 📌 About the Project
